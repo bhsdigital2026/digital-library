@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BHS Digital Library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════ HOME PAGE ═══════════ -->
+  <div class="page active" id="page-home">
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="logo-area">
+          <span class="logo-icon">📚</span>
+          <div>
+            <h1 class="site-title">BHS Digital Library</h1>
+            <p class="site-sub">bhsdigital2026 &nbsp;·&nbsp; 12 Folders &nbsp;·&nbsp; 18 Subfolders</p>
+          </div>
+        </div>
+        <div class="hint-badge">👆 Click a folder to explore</div>
+      </div>
+    </header>
+
+    <main class="home-grid-wrap">
+      <div class="home-grid" id="homeGrid"></div>
+    </main>
+
+    <footer class="site-footer">BHS Digital Library &nbsp;·&nbsp; Powered by bhsdigital2026</footer>
+  </div>
+
+  <!-- ═══════════ DETAIL PAGE ═══════════ -->
+  <div class="page" id="page-detail">
+    <header class="detail-header" id="detailHeader">
+      <button class="back-btn" onclick="goHome()">← Home</button>
+      <div class="detail-title-area">
+        <span class="detail-emoji" id="detailEmoji"></span>
+        <div>
+          <h2 class="detail-name" id="detailName"></h2>
+          <p class="detail-sub" id="detailSub"></p>
+        </div>
+      </div>
+    </header>
+    <div class="breadcrumb">Home &rsaquo; <span id="breadName"></span></div>
+
+    <!-- Class folders: 3 subfolders -->
+    <div class="subfolder-section" id="subSection">
+      <div class="sub-grid" id="subGrid"></div>
+    </div>
+
+    <!-- General folders: single card -->
+    <div class="general-section" id="genSection">
+      <div class="gen-card" id="genCard">
+        <div class="gen-icon" id="genEmoji"></div>
+        <h3 id="genName"></h3>
+        <p>This folder contains all files directly.<br>No subfolders are present.</p>
+        <a href="#" class="open-btn" id="genLink">📂 &nbsp;Open Folder</a>
+      </div>
+    </div>
+
+    <footer class="site-footer" id="detailFooter"></footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
